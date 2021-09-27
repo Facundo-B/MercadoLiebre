@@ -1,0 +1,314 @@
+/*
+Paleta:
+Amarillo: #EAC926;
+Azul: #03264C;
+Celeste: #1259c3;
+Gris oscuro: #666;
+Gris claro: #ebebeb;
+Verde: #39b54a;
+
+Cuerpos de texto: 12px
+Titulares (Basado en tu última visita/Ofertas): 24px
+Precios: 18px
+Descuentos: 16px
+Descripciones: 16px
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+/*MOBILE*/
+
+@media (min-width: 360px){
+    main article{
+        width: 100%;
+    }
+
+    main .description {
+        opacity: 0;
+    }
+
+    header nav {
+        display: none;
+    }
+
+    footer article p {
+        padding: 0 20%;
+    }
+
+    footer section{
+        display: flex;
+        flex-direction: column;
+    }
+
+    header #logo{
+        width:50%;
+    }
+
+    header #search-bar{
+        width:30%;
+    }
+    
+
+    header #cuotas-text{
+        width: 100%;
+    }
+}
+
+
+/*TABLET*/
+
+@media (min-width: 768px){
+
+
+    header .burger-menu {
+        display: none;
+    }
+
+    header #cuotas-text{
+        width: 30%;
+    }
+
+    header #logo{
+        width:30%;
+    }
+
+    header #search-bar{
+        width:30%;
+    }
+
+    header nav {
+        display: block;
+        font-size: 0.7rem;
+    }
+    
+    header nav ul li{
+        margin: 0 1.5rem;
+    }
+
+    main article {
+        box-shadow: 0 0 0px rgb(100, 100, 100);
+        width: 45%;
+    }
+
+    footer article p {
+        padding: 0 20%;
+    }
+
+}
+
+/*DESKTOP*/
+
+@media (min-width: 1024px){
+    main article {
+        box-shadow: 0 0 0px rgb(100, 100, 100);
+        width: 20%;
+        transition: box-shadow 0.3s;
+    }
+
+    main article:hover{
+        box-shadow: 0 0 10px rgb(100, 100, 100);
+    }
+
+    main article .description{
+        opacity: 0;
+        transition: opacity 0.5s;
+    }
+    
+    main article:hover .description{
+        opacity: 1;
+    }
+
+    header nav{
+        font-size: 1rem;
+    }
+
+    header nav ul li{
+        margin: 0 2rem;
+    }
+
+    footer article p {
+        padding: 0 20%;
+    }
+
+    footer section{
+        display: flex;
+        flex-direction: row;
+    }
+
+
+}
+
+* {
+    font-family: Roboto, sans-serif;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #EAC926;
+}
+
+header #logo-search-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+header #search-bar{
+    height: 2rem;
+    background-color: white;
+    border: solid 0.5px black;
+    color: #666;
+    border-radius: 7px;
+}
+
+header i{
+    margin-right: 1rem;
+}
+
+header #cuotas-text{
+    text-align: center;
+}
+
+header .burger-menu {
+    text-align: center;
+}
+
+header .burger-menu .fas {
+    font-size: 1.5em;
+    background-color: #1259c3;
+    color: white;
+    padding: 0.5em;
+    border-radius: 7px;
+    margin: 1em 0 1em;
+}
+
+header #nav-wrapper{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+header nav{
+    margin: 1rem 0 1rem;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav ul a {
+    text-decoration: none;
+    color: black;
+}
+
+#banner img {
+    width: 100%;
+}
+
+main {
+    font-size: 12px;
+    margin: auto;
+    width: 90vw;
+}
+
+main section{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+main article {
+    margin-bottom: 10px;
+    position: relative;
+}
+
+main h2 {
+    font-size: 24px;
+    color: #666;
+    margin: 2rem 0;
+}
+
+main .product {
+    width: 100%;
+    margin: auto;
+}
+
+main .product img {
+    width: 100%;
+}
+
+main .product-desc {
+    border-top: 1px solid #ebebeb;
+    padding: 15px;
+}
+
+main .box-price{
+    display: flex;
+    justify-content: flex-start;
+}
+
+main .price {
+    font-size: 18px;
+    width: 30%;
+}
+
+main .description {
+    font-size: 16px;
+    color: #666;
+}
+
+main .discount{
+    color: #39b54a;
+    font-size: 16px;
+    width: 70%;
+}
+
+main section article i {
+    color: #39b54a;
+    display: block;
+    font-size: 16px;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #39b54a;
+    background-color: #FFF;
+    border-radius: 50%;
+    position: absolute;
+    right: 20px;
+    bottom: 40px;
+    transition: transform 2s;
+}
+
+main section article i:hover{
+    transform: rotate(-90deg)
+}
+
+footer section {
+    text-align: center;
+}
+
+footer article {
+    margin: 3rem 0;
+}
+
+footer #copyright {
+    text-align: left;
+}
+
+footer i {
+    transition: color 0.5s;
+    color: #1259c3;
+}
+
+footer section i:hover{
+    color: #EAC926;
+}
+
+footer .fas {
+    font-size: 2em;
+    margin-bottom: 0.3em;
+}
