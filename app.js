@@ -4,7 +4,7 @@ const path = require('path');
 
 app.use( express.static(path.resolve(__dirname, './public')) );
 
-app.listen(8080, ()=> console.log("Todo ready."));
+app.listen( process.env.PORT || 8080, ()=> console.log("Todo ready."));
 
 /*Routes*/
 app.get("/", (req, res) =>{
