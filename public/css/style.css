@@ -170,6 +170,9 @@ header i{
 
 header #cuotas-text{
     text-align: center;
+    font-size: large;
+    font-weight: 600;
+    color: #03264C;
 }
 
 header .burger-menu {
